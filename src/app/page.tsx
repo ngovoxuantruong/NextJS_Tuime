@@ -1,10 +1,17 @@
-import Image from 'next/image';
-import Footer from './components/Footer';
+import MainProduct from './components/MainProduct';
+import PetDiscount from './components/PetDiscount';
+import PetTypes from './components/PetTypes';
+import Slider from './components/Slider';
 
-export default function Home() {
-    return (
-        <div>
-            <Footer></Footer>
-        </div>
-    );
-}
+const page = () => {
+  return (
+    <div>
+      <Slider />
+      <PetTypes />
+      <PetDiscount />
+      <MainProduct />
+    </div>
+  );
+};
+
+export default page;

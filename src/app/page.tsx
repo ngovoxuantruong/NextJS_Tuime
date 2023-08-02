@@ -1,5 +1,10 @@
 import Image from 'next/image';
+import Footer from './components/Footer';
 
 export default function Home() {
-    return <div>Main page</div>;
+    return (
+        <div>
+            <Footer></Footer>
+        </div>
+    );
 }

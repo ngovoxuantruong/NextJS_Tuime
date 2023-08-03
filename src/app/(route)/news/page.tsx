@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Breadcrumb from '@/app/components/UI/Breadcrumb';
 import News from '@/app/components/news/News';
 
@@ -10,6 +11,10 @@ const page = () => {
       </div>
     </div>
   );
+=======
+const page = () => {
+  return <div>News page</div>;
+>>>>>>> origin/develop
 };
 
 export default page;

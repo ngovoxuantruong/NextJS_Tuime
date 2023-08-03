@@ -27,6 +27,7 @@ module.exports = {
           accent: '#4ca240',
           neutral: '#474654',
           'base-100': '#fff',
+          'base-200': '#181818',
         },
       },
       'cmyk',

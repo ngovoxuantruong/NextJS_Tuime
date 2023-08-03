@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .repeater-box {
+    display: grid;
+    grid-auto-rows: auto;
+    width: 100%;
+    height: auto !important;
+    margin: 0;
+    overflow: inherit;
+    min-height: 10px;
+    position: relative;
+  }
+
+  .repeater-item {
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+}

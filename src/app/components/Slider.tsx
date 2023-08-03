@@ -7,6 +7,7 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../styles/swiper.css';
+import Button from './UI/Button';
 
 const Slider = () => {
   return (
@@ -65,11 +66,7 @@ const Slider = () => {
             Thức ăn tốt nhất cho thú cưng
           </h2>
 
-          <a href="#!" className="z-10">
-            <button className="btn btn-active btn-secondary rounded-2xl px-8 hover:bg-primary hover:border-primary hover:text-white">
-              Sản phẩm
-            </button>
-          </a>
+          <Button label={'Sản phẩm'} />
         </SwiperSlide>
       </Swiper>
     </div>

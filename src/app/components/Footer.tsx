@@ -12,8 +12,8 @@ import { SlPhone } from 'react-icons/sl';
 
 export default function Footer() {
   return (
-    <div className="footer bg-neutral  p-5">
-      <div className="selectFooter container p-5">
+    <div className="footer bg-neutral p-5">
+      <div className="selectFooter container max-w-[1200px] p-5">
         <div className="footerTop">
           <div className="listFooter 2xl:grid 2xl:grid-cols-4 xl:grid xl:grid-cols-4 lg:grid lg:grid-cols-4 md:grid md:grid-cols-2 sm:grid sm:grid-cols-1">
             <div className="introduce p-4">
@@ -120,7 +120,7 @@ export default function Footer() {
         </div>
         <div className="w-full footerBottom border-t-[1px] border-gray-400 items-center lg:flex lg:flex-row lg:justify-between md:flex-row sm:flex sm:justify-center sm:flex-col">
           <div className="footerBottomLeft flex lg:items-end lg:flex-row md:flex-row text-gray-300 text-base mt-2 sm:flex-col sm:items-center">
-            <a className=" hover:text-primary text-sm" href="">
+            <a className=" hover:text-secondary text-sm" href="">
               Sản phẩm của Nam Trường Hoài
             </a>
           </div>

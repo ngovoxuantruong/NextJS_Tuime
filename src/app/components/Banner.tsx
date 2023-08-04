@@ -37,7 +37,7 @@ const Banner = () => {
       {/* section right */}
       <section className="w-1/3 order-3 block">
         <div className="container-child">
-          <div className="w-full h-auto top-0 left-0 translate-x-0 translate-y-0 p-[50px] relative">
+          <div className="w-full h-auto top-0 left-0 translate-x-0 translate-y-0 p-[50px]">
             <div className="w-1/2 h-[300px] bg-[url('/banner/cat.png')] bg-no-repeat bg-center bg-contain top-0 left-1/2 translate-y-0 -translate-x-1/2 relative"></div>
           </div>
         </div>

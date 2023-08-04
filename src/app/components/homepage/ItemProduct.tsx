@@ -33,18 +33,18 @@ const ItemProduct: FC<ProductItemProps> = ({ product }) => {
                   ></Image>
                 </Link>
                 <Link className="icon absolute top-0 right-0" href="">
-                  <TbHeart className="text-4xl p-2 bg-gray-300 rounded-3xl hover:bg-primary hover:text-white"></TbHeart>
+                  <TbHeart className="text-4xl p-2 bg-gray-100 rounded-3xl hover:bg-primary hover:text-white"></TbHeart>
                 </Link>
               </div>
-              <div className="listIcont absolute top-14 right-0 opacity-0 group-hover:opacity-100 ease-in-out transition duration-300">
+              <div className="listIcont absolute top-12 right-0 opacity-0 group-hover:opacity-100 ease-in-out transition duration-300">
                 <Link className="icon" href="">
-                  <TbShoppingBag className="text-4xl p-2 bg-gray-300 rounded-3xl mb-2 hover:bg-primary hover:text-white"></TbShoppingBag>
+                  <TbShoppingBag className="text-4xl p-2 bg-gray-100 rounded-3xl mb-2 hover:bg-primary hover:text-white"></TbShoppingBag>
                 </Link>
                 <Link className="icon" href="">
-                  <TbSearch className="text-4xl p-2 bg-gray-300 rounded-3xl mb-2 hover:bg-primary hover:text-white"></TbSearch>
+                  <TbSearch className="text-4xl p-2 bg-gray-100 rounded-3xl mb-2 hover:bg-primary hover:text-white"></TbSearch>
                 </Link>
                 <Link className="icon" href="">
-                  <TbArrowsExchange2 className="text-4xl p-2 bg-gray-300 rounded-3xl mb-2 hover:bg-primary hover:text-white"></TbArrowsExchange2>
+                  <TbArrowsExchange2 className="text-4xl p-2 bg-gray-100 rounded-3xl mb-2 hover:bg-primary hover:text-white"></TbArrowsExchange2>
                 </Link>
               </div>
               <div className="statusProduct absolute top-0 left-0 bg-green-600 text-white text-sm pl-3 pr-3">

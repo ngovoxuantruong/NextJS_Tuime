@@ -1,9 +1,9 @@
-import Button from './UI/Button';
+import { Button } from '../UI/Button';
 
 const Banner = () => {
   return (
     /* section left */
-    <section className="w-full h-full max-w-full flex justify-center flex-wrap my-12 relative top-0 bottom-0 z-[5] bg-primary">
+    <section className="w-full h-full max-w-full flex justify-center flex-wrap mt-12 relative top-0 bottom-0 z-[5] bg-primary">
       <section className="w-1/3 order-1 block">
         <div className="container-child">
           <div className="w-full h-auto top-0 left-1/2 -translate-x-1/2 clip-path-banner bg-secondary p-14 z-[1] relative">
@@ -26,10 +26,9 @@ const Banner = () => {
               Với chất lượng dịch vụ tốt nhất luôn được khách hàng tin tưởng sẽ
               là điểm đến lý tưởng và tuyệt vời dành cho vật nuôi.
             </div>
-            <Button
-              label="Xem ngay"
-              className={'w-fit text-center top-0 left-1/2 h-auto relative '}
-            />
+            <div className="h-auto w-full top-0 left-0 text-base-100 text-lg text-center mb-5 leading-7 block relative">
+              <Button variant={'secondary'}>Xem ngay</Button>
+            </div>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@ import React from 'react';
 import Title from '../UI/Title';
 import Image from 'next/image';
 import specialPicture from '../../../../public/get-image-v3.png';
+import { Button } from '../UI/Button';
 const SpecialProducts = () => {
   return (
     <div className="specialProducts pt-[50px] pb-[50px]">
@@ -27,9 +28,7 @@ const SpecialProducts = () => {
                 tín trên thế giới.
               </p>
             </div>
-            <button className="bg-secondary pl-[30px] pr-[30px] pb-[10px] pt-[10px] rounded-full">
-              XEM NGAY
-            </button>
+            <Button>Xem ngay</Button>
           </div>
           <div className="specialProductsRight">
             <Image src={specialPicture} width={600} alt=""></Image>

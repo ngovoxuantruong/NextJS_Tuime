@@ -4,6 +4,7 @@ import React, { FC } from 'react';
 import { TbCalendarCheck, TbUsersGroup } from 'react-icons/tb';
 import picturePost from '../../../../public/tt7.jpeg';
 import { Posts } from './UpdatedPost';
+import { Button } from '../UI/Button';
 
 interface PostProp {
   post: Posts;
@@ -43,9 +44,12 @@ const ItemPost: FC<PostProp> = ({ post }) => {
               <Link href="">{post.title}</Link>
             </div>
             <div className="button  text-center">
-              <button className="bg-secondary pl-[30px] pr-[30px] pb-[10px] pt-[10px] rounded-full">
-                TÌM HIỂU THÊM
-              </button>
+              <Button
+                variant={'secondary'}
+                className="hover:btn-primary hover:text-base-100"
+              >
+                Tìm hiểu thêm
+              </Button>
             </div>
           </div>
         </div>

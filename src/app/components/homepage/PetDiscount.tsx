@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Button from './UI/Button';
+import { Button } from '../UI/Button';
 
 const PetDiscount = () => {
   const petDiscountImage = [
@@ -8,7 +8,7 @@ const PetDiscount = () => {
   ];
 
   return (
-    <section className="container max-w-[1200px] my-12">
+    <section className="container max-w-[1200px] my-12 p-8">
       <div className="repeater-box grid-cols-2 auto-rows-auto gap-5">
         {petDiscountImage.map(({ src, h3 }, index) => (
           <article
@@ -32,10 +32,7 @@ const PetDiscount = () => {
                 <h3 className="text-primary text-4xl mb-5 text-left font-semibold uppercase leading-[45px]">
                   {h3}
                 </h3>
-                <Button
-                  label={'Xem ngay'}
-                  className={'!bg-primary text-base-100'}
-                />
+                <Button variant={'primary'}>Xem ngay</Button>
               </div>
             </div>
           </article>

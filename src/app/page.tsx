@@ -1,11 +1,11 @@
-import Banner from './components/Banner';
-import HotDeals from './components/HotDeals';
-import MainProduct from './components/MainProduct/MainProduct';
-import PetDiscount from './components/PetDiscount';
-import PetTypes from './components/PetTypes';
-import Slider from './components/Slider';
-import SpecialProducts from './components/SpecialProducts/SpecialProducts';
-import UpdatedPost from './components/UpdatedPost/UpdatedPost';
+import Banner from './components/homepage/Banner';
+import HotDeals from './components/homepage/HotDeals';
+import MainProduct from './components/homepage/MainProduct';
+import PetDiscount from './components/homepage/PetDiscount';
+import PetTypes from './components/homepage/PetTypes';
+import Slider from './components/homepage/Slider';
+import SpecialProducts from './components/homepage/SpecialProducts';
+import UpdatedPost from './components/homepage/UpdatedPost';
 
 const page = () => {
   return (

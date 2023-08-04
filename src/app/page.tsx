@@ -1,3 +1,4 @@
+import Banner from './components/Banner';
 import MainProduct from './components/MainProduct';
 import PetDiscount from './components/PetDiscount';
 import PetTypes from './components/PetTypes';
@@ -10,6 +11,7 @@ const page = () => {
       <PetTypes />
       <PetDiscount />
       <MainProduct />
+      <Banner />
     </div>
   );
 };

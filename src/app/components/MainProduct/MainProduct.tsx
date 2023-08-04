@@ -243,6 +243,7 @@ const allMenuMain: menuMainProduct[] = [
 
 const MainProduct = () => {
   const [activeTab, setActiveTab] = useState(1);
+
   const handleClickActiveTab = (tabNumber: number) => {
     setActiveTab(tabNumber);
   };
@@ -261,13 +262,13 @@ const MainProduct = () => {
               <>
                 <li className="mr-4" key={item.id}>
                   {
-                    <Link
-                      href=""
+                    <div
+                      id="forcus"
                       onClick={() => handleClickActiveTab(item.id)}
-                      className="pt-2 pb-2 pl-5 pr-5 text-xl rounded-3xl border-primary border-dashed border-2 hover:border-dashed hover:border-2  hover:border-primary"
+                      className="pt-2 pb-2 pl-5 pr-5 text-xl rounded-3xl hover:border-dashed hover:border-2  hover:border-primary cursor-pointer"
                     >
                       {item.name}
-                    </Link>
+                    </div>
                   }
                 </li>
               </>

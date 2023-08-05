@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Button } from '../UI/Button';
+import Link from 'next/link';
 
 const PetDiscount = () => {
   const petDiscountImage = [
@@ -15,7 +16,7 @@ const PetDiscount = () => {
             key={index}
             className="repeater-item top-0 left-0 block w-full h-full"
           >
-            <a href="#!">
+            <Link href="#!">
               <Image
                 className="hover:scale-110 duration-300"
                 alt="cat"
@@ -23,7 +24,7 @@ const PetDiscount = () => {
                 width={560}
                 height={310}
               />
-            </a>
+            </Link>
             <div className="w-[45%] h-auto top-[50%] left-full -translate-x-full -translate-y-1/2 pl-5 block absolute">
               <div className="w-full h-full relative">
                 <div className="text-primary text-2xl font-semibold mb-[5px]">

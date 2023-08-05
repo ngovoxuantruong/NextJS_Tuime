@@ -9,6 +9,7 @@ import {
   TfiEmail,
 } from 'react-icons/tfi';
 import { SlPhone } from 'react-icons/sl';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
@@ -25,30 +26,30 @@ export default function Footer() {
               </p>
               <ul className="listIcon flex justify-between p">
                 <li>
-                  <a href="#">
+                  <Link href="#">
                     <TfiFacebook className="text-primary bg-base-100 text-4xl p-2 rounded-md hover:bg-secondary" />
-                  </a>
+                  </Link>
                 </li>
 
                 <li>
-                  <a href="">
+                  <Link href="">
                     <TfiTwitterAlt className="text-primary bg-base-100 text-4xl p-2 rounded-md hover:bg-secondary" />
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="">
+                  <Link href="">
                     <TfiGoogle className="text-primary bg-base-100 text-4xl p-2 rounded-md hover:bg-secondary"></TfiGoogle>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="">
+                  <Link href="">
                     <TfiYoutube className="text-primary bg-base-100 text-4xl p-2 rounded-md hover:bg-secondary" />
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="">
+                  <Link href="">
                     <TfiPinterest className="text-primary bg-base-100 text-4xl p-2 rounded-md hover:bg-secondary" />
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -56,19 +57,19 @@ export default function Footer() {
               <h3 className="text-xl  mb-5">Liên Kết</h3>
               <ul className="listLink text-sm">
                 <li className="pb-3 mb-3 border-b-[1px] border-gray-400 border-dashed hover:text-secondary ">
-                  <a href="">Giới thiệu</a>
+                  <Link href="">Giới thiệu</Link>
                 </li>
                 <li className="pb-3 mb-3 border-b-[1px] border-gray-400 border-dashed hover:text-secondary">
-                  <a href="">Sản phẩm</a>
+                  <Link href="">Sản phẩm</Link>
                 </li>
                 <li className="pb-3 mb-3 border-b-[1px] border-gray-400 border-dashed hover:text-secondary">
-                  <a href="">Dịch Vụ</a>
+                  <Link href="">Dịch Vụ</Link>
                 </li>
                 <li className="pb-3 mb-3 border-b-[1px] border-gray-400 border-dashed hover:text-secondary">
-                  <a href="">Tin tức</a>
+                  <Link href="">Tin tức</Link>
                 </li>
                 <li className="pb-3 mb-3 border-b-[1px] border-gray-400 border-dashed hover:text-secondary">
-                  <a href="">Liên hệ</a>
+                  <Link href="">Liên hệ</Link>
                 </li>
               </ul>
             </div>
@@ -76,19 +77,19 @@ export default function Footer() {
               <h3 className="text-xl mb-5 ">Sản Phẩm</h3>
               <ul className="listProduct text-sm">
                 <li className="pb-3 mb-3 border-b-[1px] border-gray-400 border-dashed hover:text-secondary ">
-                  <a href="">Tất cả</a>
+                  <Link href="">Tất cả</Link>
                 </li>
                 <li className="pb-3 mb-3 border-b-[1px] border-gray-400 border-dashed hover:text-secondary ">
-                  <a href="">Đồ cho chó</a>
+                  <Link href="">Đồ cho chó</Link>
                 </li>
                 <li className="pb-3 mb-3 border-b-[1px] border-gray-400 border-dashed hover:text-secondary ">
-                  <a href="">Đồ cho mèo</a>
+                  <Link href="">Đồ cho mèo</Link>
                 </li>
                 <li className="pb-3 mb-3 border-b-[1px] border-gray-400 border-dashed hover:text-secondary ">
-                  <a href="">Chim cảnh</a>
+                  <Link href="">Chim cảnh</Link>
                 </li>
                 <li className="pb-3 mb-3 border-b-[1px] border-gray-400 border-dashed hover:text-secondary ">
-                  <a href="">Cá cảnh</a>
+                  <Link href="">Cá cảnh</Link>
                 </li>
               </ul>
             </div>
@@ -120,41 +121,41 @@ export default function Footer() {
         </div>
         <div className="w-full footerBottom border-t-[1px] border-gray-400 items-center lg:flex lg:flex-row lg:justify-between md:flex-row sm:flex sm:justify-center sm:flex-col">
           <div className="footerBottomLeft flex lg:items-end lg:flex-row md:flex-row text-gray-300 text-base mt-2 sm:flex-col sm:items-center">
-            <a className=" hover:text-secondary text-sm" href="">
+            <Link className=" hover:text-secondary text-sm" href="">
               Sản phẩm của Nam Trường Hoài
-            </a>
+            </Link>
           </div>
           <div className="footerBottomRight flex justify-between ">
-            <a href="">
+            <Link href="">
               <img
                 className="w-16 p-2"
                 src="https://demo037127.web30s.vn/datafiles/34980/upload/images/banner/payment_4%20%281%29.jpg"
                 alt=""
               />
-            </a>
-            <a href="">
+            </Link>
+            <Link href="">
               <img
                 className="w-16 p-2"
                 src="https://demo037127.web30s.vn/datafiles/34980/upload/images/banner/paymnet2.png?t=1684722123"
                 alt=""
               />
-            </a>
+            </Link>
 
-            <a href="">
+            <Link href="">
               <img
                 className="w-16 p-2"
                 src="https://demo037127.web30s.vn/datafiles/34980/upload/images/banner/payment3.png?t=1684722123"
                 alt=""
               />
-            </a>
+            </Link>
 
-            <a href="">
+            <Link href="">
               <img
                 className="w-16 p-2"
                 src="https://demo037127.web30s.vn/datafiles/34980/upload/images/banner/payment1.png?t=1684722123"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
         </div>
       </div>

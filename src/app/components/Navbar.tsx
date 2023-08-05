@@ -78,7 +78,7 @@ const Navbar = () => {
                 className=" group first:text-secondary relative pb-1"
               >
                 <Link
-                  className="w-auto hover:text-secondary focus:!text-secondary focus:!bg-primary"
+                  className="w-auto hover:text-secondary focus:!text-secondary focus:!bg-primary font-normal"
                   href={url ? url : '/'}
                 >
                   {label}

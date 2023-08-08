@@ -1,7 +1,6 @@
 'use client';
-
 import Link from 'next/link';
-import Title from '../UI/Title';
+import Title from '../Title';
 
 import ItemProduct from './ItemProduct';
 import { useState } from 'react';
@@ -20,7 +19,7 @@ const allDataProducts: Products[] = [
   {
     id: 1,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -30,7 +29,7 @@ const allDataProducts: Products[] = [
   {
     id: 2,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -40,7 +39,7 @@ const allDataProducts: Products[] = [
   {
     id: 3,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -50,7 +49,7 @@ const allDataProducts: Products[] = [
   {
     id: 4,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -60,7 +59,7 @@ const allDataProducts: Products[] = [
   {
     id: 5,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -70,7 +69,7 @@ const allDataProducts: Products[] = [
   {
     id: 6,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -83,7 +82,7 @@ const dogDataProducts: Products[] = [
   {
     id: 1,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -93,7 +92,7 @@ const dogDataProducts: Products[] = [
   {
     id: 2,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -103,7 +102,7 @@ const dogDataProducts: Products[] = [
   {
     id: 3,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -113,7 +112,7 @@ const dogDataProducts: Products[] = [
   {
     id: 4,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -123,7 +122,7 @@ const dogDataProducts: Products[] = [
   {
     id: 5,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -135,8 +134,7 @@ const catDataProducts: Products[] = [
   {
     id: 1,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
-
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -146,8 +144,7 @@ const catDataProducts: Products[] = [
   {
     id: 2,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
-
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -157,8 +154,7 @@ const catDataProducts: Products[] = [
   {
     id: 3,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
-
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -168,8 +164,7 @@ const catDataProducts: Products[] = [
   {
     id: 4,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
-
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -182,7 +177,7 @@ const birdDataProducts: Products[] = [
   {
     id: 1,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -192,8 +187,7 @@ const birdDataProducts: Products[] = [
   {
     id: 2,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
-
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -203,7 +197,7 @@ const birdDataProducts: Products[] = [
   {
     id: 3,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -215,7 +209,7 @@ const fishDataProducts: Products[] = [
   {
     id: 1,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -225,7 +219,7 @@ const fishDataProducts: Products[] = [
   {
     id: 2,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
-    price: 195000,
+    price: 199.5,
     cost: 210.0,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
@@ -256,26 +250,28 @@ const MainProduct = () => {
 
   return (
     <div className="mainProduct">
-      <div className="container max-w-[1200px]">
+      <div className="container">
         {/* Top Main Product */}
         <div className="mpTop">
-          <Title label="chất lượng tốt nhấT" h2="Sản Phẩm Chính"></Title>
+          <Title text="chất lượng tốt nhấT" h2="Sản Phẩm Chính"></Title>
         </div>
         <div className="mpBotom">
           {/* Menu main product */}
           <ul className="menuMP flex justify-center">
             {allMenuMain.map((item) => (
-              <li className="mr-4" key={item.id}>
-                {
-                  <div
-                    id="forcus"
-                    onClick={() => handleClickActiveTab(item.id)}
-                    className="pt-2  pb-2 pl-5 pr-5 text-xl  box-border rounded-3xl hover:border-dashed hover:border-2  hover:border-primary cursor-pointer"
-                  >
-                    {item.name}
-                  </div>
-                }
-              </li>
+              <>
+                <li className="mr-4" key={item.id}>
+                  {
+                    <div
+                      id="forcus"
+                      onClick={() => handleClickActiveTab(item.id)}
+                      className="pt-2 pb-2 pl-5 pr-5 text-xl rounded-3xl hover:border-dashed hover:border-2  hover:border-primary cursor-pointer"
+                    >
+                      {item.name}
+                    </div>
+                  }
+                </li>
+              </>
             ))}
           </ul>
           <div className="listProduct pt-10">

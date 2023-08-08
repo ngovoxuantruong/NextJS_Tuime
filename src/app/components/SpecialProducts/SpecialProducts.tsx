@@ -1,15 +1,14 @@
 import React from 'react';
-import Title from '../UI/Title';
+import Title from '../Title';
 import Image from 'next/image';
 import specialPicture from '../../../../public/get-image-v3.png';
-import { Button } from '../UI/Button';
 const SpecialProducts = () => {
   return (
     <div className="specialProducts pt-[50px] pb-[50px]">
-      <div className="container max-w-[1200px]">
+      <div className="container">
         <div className="selectSpecialProduct grid grid-cols-2 gap-10">
           <div className="specialProductsLeft">
-            <Title label="CHẤT LƯỢNG TỐT NHẤT" h2="Sản Phẩm Đặt Biệt"></Title>
+            <Title text="CHẤT LƯỢNG TỐT NHẤT" h2="Sản Phẩm Đặt Biệt"></Title>
             <div className="productIntroduction mb-5 text-base text-justify">
               <p className="mb-4">
                 Rất nhiều nghiên cứu đã chỉ ra rằng: Những người nuôi thú cưng
@@ -28,7 +27,9 @@ const SpecialProducts = () => {
                 tín trên thế giới.
               </p>
             </div>
-            <Button>Xem ngay</Button>
+            <button className="bg-secondary pl-[30px] pr-[30px] pb-[10px] pt-[10px] rounded-full">
+              XEM NGAY
+            </button>
           </div>
           <div className="specialProductsRight">
             <Image src={specialPicture} width={600} alt=""></Image>

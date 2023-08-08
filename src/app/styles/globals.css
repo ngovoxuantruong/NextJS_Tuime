@@ -2,36 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .repeater-box {
-    display: grid;
-    grid-auto-rows: auto;
-    gap: 20px;
-    width: 100%;
-    height: auto !important;
-    margin: 0;
-    overflow: inherit;
-    min-height: 10px;
-    position: relative;
-  }
-
-  .repeater-item {
-    max-width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
+.repeater-box {
+  display: grid;
+  grid-auto-rows: auto;
+  gap: 20px;
+  width: 100%;
+  height: auto !important;
+  margin: 0;
+  overflow: inherit;
+  min-height: 10px;
+  position: relative;
 }
 
-@layer components {
-  .container-child {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
+.repeater-item {
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-@layer components {
-  .clip-path-banner {
-    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  }
+.container-child {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.clip-path-banner {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.container-group-left {
+  order: 1;
+  width: 30%;
+  padding: 0px 15px 0px 0px;
+  display: block;
+}
+
+.container-group-right {
+  width: 70%;
+  order: 2;
+  padding: 0px 0px 0px 15px;
+  display: block;
+}
+
+.background-widget {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  display: block;
+  padding: 0 0 100% 0;
+  position: relative;
 }

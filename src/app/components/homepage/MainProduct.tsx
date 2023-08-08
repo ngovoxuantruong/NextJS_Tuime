@@ -265,12 +265,15 @@ const MainProduct = () => {
           {/* Menu main product */}
           <ul className="menuMP flex justify-center">
             {allMenuMain.map((item) => (
-              <li className="mr-4" key={item.id}>
+              <li
+                className="mr-4 border-dashed border-2 border-transparent first:border-primary hover:border-primary box-border rounded-3xl"
+                key={item.id}
+              >
                 {
                   <div
                     id="forcus"
                     onClick={() => handleClickActiveTab(item.id)}
-                    className="pt-2  pb-2 pl-5 pr-5 text-xl  box-border rounded-3xl hover:border-dashed hover:border-2  hover:border-primary cursor-pointer"
+                    className="pt-2 pb-2 pl-5 pr-5 text-xl cursor-pointer"
                   >
                     {item.name}
                   </div>

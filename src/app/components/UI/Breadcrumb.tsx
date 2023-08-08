@@ -36,26 +36,23 @@ const Breadcrumb = () => {
   }, [pathName]);
 
   return (
-    <div>
-      <div className="breadcrumb relative">
-        <Image src={bg1} alt=""></Image>
-        <div className=" container absolute top-1/4 left-0 w-full">
-          <h2 className="text-[40px] font-bold mb-3">Giới thiệu</h2>
-          <div className="breadcrumbLink flex uppercase">
-            <Link
-              href="/"
-              className="text-base ml-1 mr-1 hover:text-primary duration-300"
-            >
-              Trang chủ
-            </Link>
-            <span className="text-base ml-1 mr-1">/</span>
-            <Link href="" className="text-base ml-1 mr-1 text-primary">
-              {breadcrumbTitle}
-            </Link>
-          </div>
+    <section className="bg-no-repeat bg-cover bg-center block bg-[url('/breadcrumb/bg1.jpg')] h-auto py-[100px]">
+      <div className=" container absolute top-1/4 left-0 w-full">
+        <h2 className="text-[40px] font-bold mb-3">Giới thiệu</h2>
+        <div className="breadcrumbLink flex uppercase">
+          <Link
+            href="/"
+            className="text-base ml-1 mr-1 hover:text-primary duration-300"
+          >
+            Trang chủ
+          </Link>
+          <span className="text-base ml-1 mr-1">/</span>
+          <Link href="" className="text-base ml-1 mr-1 text-primary">
+            {breadcrumbTitle}
+          </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Breadcrumb from '@/app/components/UI/Breadcrumb';
 
 const page = () => {
@@ -7,10 +6,6 @@ const page = () => {
       <Breadcrumb />
     </div>
   );
-=======
-const page = () => {
-  return <div>Library page</div>;
->>>>>>> origin/develop
 };
 
 export default page;

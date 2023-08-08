@@ -7,11 +7,7 @@ import { VariantProps, cva } from 'class-variance-authority';
 import { cn } from '@/app/lib/utils';
 
 const buttonVariants = cva(
-<<<<<<< HEAD
   'btn btn-active text-primary min-h-1 rounded-3xl px-8  hover:bg-primary text-sm font-normal hover:border-primary hover:text-base-100 z-[1] duration-300',
-=======
-  'btn btn-active text-primary rounded-3xl px-8 hover:bg-primary hover:border-primary hover:text-base-100 z-[1]',
->>>>>>> origin/develop
   {
     variants: {
       variant: {

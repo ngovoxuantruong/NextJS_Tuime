@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import pictureClient from '../../../../../public/review/x2.jpg';
+import pictureClient from '../../../../public/review/x2.jpg';
 import { SiMonoprix } from 'react-icons/si';
 import Image from 'next/image';
 import { CustomerReviews } from './CustomerReviews';
@@ -10,7 +10,7 @@ interface Customer {
 
 const Customer: FC<Customer> = ({ customer }) => {
   return (
-    <article className="itemReview p-[30px] bg-white">
+    <article className="itemReview p-[30px] bg-white rounded-2xl shadow-2xl flex justify-between flex-col">
       <div className="customer flex justify-start mb-5">
         <div className="customerImg overflow-hidden rounded-full border-2">
           <Image

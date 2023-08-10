@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { FC } from 'react';
 import { TeamWorkProp } from './TeamWorks';
-import member from '../../../../../public/team-work/doctor3.jpg';
+import member from '../../../../public/team-work/doctor3.jpg';
 interface InforTeamWork {
   teamWorkMember: TeamWorkProp;
 }
@@ -9,9 +9,9 @@ interface InforTeamWork {
 const InforMember: FC<InforTeamWork> = ({ teamWorkMember }) => {
   return (
     <article>
-      <div className="imgMember overflow-hidden">
+      <div className="imgMember overflow-hidden ml-2 mr-2 h-80">
         <Image
-          width={250}
+          width={290}
           src={member}
           alt=""
           className="hover:scale-110 ease-in-out transition duration-300"

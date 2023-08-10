@@ -1,13 +1,16 @@
 import Breadcrumb from '@/app/components/UI/Breadcrumb';
 import SpecialProducts from '@/app/components/UI/SpecialProducts';
 import specialPicture from '../../../../public/get-image-v4.png';
-import { TeamWorks } from '@/app/(route)/introduce/TeamWork/TeamWorks';
-import CustomerReviews from './CustomerReviews/CustomerReviews';
 
+import CustomerReviews from '../../components/CustomerReviews/CustomerReviews';
+import { TeamWorks } from '@/app/components/TeamWork/TeamWorks';
+import { TbHeadset, TbBox } from 'react-icons/tb';
+import { BiCreditCard } from 'react-icons/bi';
+import { BsTruck } from 'react-icons/bs';
 const page = () => {
   return (
-    <div className="introduce">
-      <Breadcrumb></Breadcrumb>
+    <section className="introduce">
+      <Breadcrumb h2="Giới thiệu" label="Giới thiệu"></Breadcrumb>
       <SpecialProducts
         orderLeft="order-2"
         orderRight="order-1"
@@ -26,10 +29,51 @@ const page = () => {
         </p>
         "
       ></SpecialProducts>
-
       <TeamWorks></TeamWorks>
       <CustomerReviews></CustomerReviews>
-    </div>
+      <div className="suport pt-[50px] pb-[50px]">
+        <div className="container">
+          <div className="ml-32 mr-32 flex justify-between items-center">
+            <div className="itemSuport flex justify-start items-center ">
+              <div className="iconSuport">
+                <TbHeadset className="text-5xl text-primary hover:scale-110 ease-in-out transition duration-700"></TbHeadset>
+              </div>
+              <div className="inForSuport pl-5">
+                <h3 className="text-lg font-medium">Hỗ trợ 24/7</h3>
+                <p className="text-sm">Tư vấn, giải quyết mọi vấn đề</p>
+              </div>
+            </div>
+            <div className="itemSuport flex justify-start items-center ">
+              <div className="iconSuport">
+                <TbBox className="text-5xl text-primary hover:scale-110 ease-in-out transition duration-700"></TbBox>
+              </div>
+              <div className="inForSuport pl-5">
+                <h3 className="text-lg font-medium">Hỗ trợ đổi trả</h3>
+                <p className="text-sm">Trong vòng 7 ngày</p>
+              </div>
+            </div>
+            <div className="itemSuport flex justify-start items-center ">
+              <div className="iconSuport">
+                <BiCreditCard className="text-5xl text-primary hover:scale-110 ease-in-out transition duration-700"></BiCreditCard>
+              </div>
+              <div className="inForSuport pl-5">
+                <h3 className="text-lg font-medium">Thanh toán đa dạng</h3>
+                <p className="text-sm">Ví Momo, ZaloPay, Mastercard...</p>
+              </div>
+            </div>
+            <div className="itemSuport flex justify-start items-center ">
+              <div className="iconSuport">
+                <BsTruck className="text-5xl text-primary hover:scale-110 ease-in-out transition duration-700"></BsTruck>
+              </div>
+              <div className="inForSuport pl-5">
+                <h3 className="text-lg font-medium">Miễn phí giao hàng</h3>
+                <p className="text-sm">Với đơn hàng từ 500K</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

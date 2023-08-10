@@ -1,55 +1,31 @@
-'use client';
 
-import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import bg1 from '../../../../public/breadcrumb/bg1.jpg';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import React, { FC } from 'react';
 
-const Breadcrumb = () => {
-  const pathName = usePathname();
-  const [breadcrumbTitle, setBreadcrumbTitle] = useState('');
-
-  useEffect(() => {
-    switch (pathName) {
-      case '/introduce':
-        setBreadcrumbTitle('Giới thiệu');
-        break;
-      case '/products':
-        setBreadcrumbTitle('Sản phẩm');
-        break;
-      case '/service':
-        setBreadcrumbTitle('Dịch vụ');
-        break;
-      case '/news':
-        setBreadcrumbTitle('Tin tức');
-        break;
-      case '/library':
-        setBreadcrumbTitle('Thư viện');
-        break;
-      case '/contact':
-        setBreadcrumbTitle('Liên hệ');
-        break;
-      default:
-        break;
-    }
-  }, [pathName]);
-
+interface BreadcrumbProps {
+  h2: string;
+  label: string;
+}
+const Breadcrumb: FC<BreadcrumbProps> = ({ h2, label }) => {
   return (
-    <section className="bg-no-repeat bg-cover bg-center block bg-[url('/breadcrumb/bg1.jpg')] h-auto py-[100px]">
-      <div className=" container absolute top-1/4 left-0 w-full">
-        <h2 className="text-[40px] font-bold mb-3">Giới thiệu</h2>
-        <div className="breadcrumbLink flex uppercase">
-          <Link
-            href="/"
-            className="text-base ml-1 mr-1 hover:text-primary duration-300"
-          >
-            Trang chủ
-          </Link>
-          <span className="text-base ml-1 mr-1">/</span>
-          <Link href="" className="text-base ml-1 mr-1 text-primary">
-            {breadcrumbTitle}
-          </Link>
+    <section>
+      <div className="breadcrumb bg-no-repeat bg-cover bg-center block  bg-[url('/breadcrumb/bg1.jpg')] h-auto py-[100px]">
+        <div className=" container">
+          <div className='pl-32'>
+            <h2 className="text-[40px] font-bold mb-3">{h2}</h2>
+            <div className="breadcrumbLink flex">
+              <Link href="" className="text-base ml-1 mr-1">
+                Trang chủ
+              </Link>
+              <span className="text-base ml-1 mr-1">/</span>
+              <Link href="" className="text-base ml-1 mr-1 hover:text-primary">
+                {label}
+              </Link>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

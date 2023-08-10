@@ -44,7 +44,7 @@ export const TeamWorks = () => {
       <div className="container">
         <div className="listMember">
           <div className="selectListMember">
-            <div className="member flex justify-between items-center">
+            <div className="member flex justify-center items-center">
               {TeamWorkMembers.map((teamWorkMember) => (
                 <InforMember
                   key={teamWorkMember.id}

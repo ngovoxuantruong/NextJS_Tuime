@@ -40,7 +40,7 @@ const CustomerReviews = () => {
       <div className="selecteCustomerReview pt-[50px] pb-[70px]">
         <Title label="NHẬN XÉT" h2="Cảm nhận khách hàng"></Title>
         <div className="container">
-          <div className="listReview grid grid-cols-3 gap-7">
+          <div className="listReview grid grid-cols-3 gap-7 ml-32 mr-32">
             {
                 customers.map((customer)=>(
                     <Customer key={customer.id} customer={customer}></Customer>

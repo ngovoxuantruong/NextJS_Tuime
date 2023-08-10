@@ -4,9 +4,9 @@ import Image from 'next/image';
 import specialPicture from '../../../../public/get-image-v3.png';
 const SpecialProducts = () => {
   return (
-    <div className="specialProducts pt-[50px] pb-[50px]">
-      <div className="container">
-        <div className="selectSpecialProduct grid grid-cols-2 gap-10">
+    <div className="specialProducts pt-[50px] pb-[50px] w-full">
+      <div className="">
+        <div className="selectSpecialProduct flex justify-between">
           <div className="specialProductsLeft">
             <Title text="CHẤT LƯỢNG TỐT NHẤT" h2="Sản Phẩm Đặt Biệt"></Title>
             <div className="productIntroduction mb-5 text-base text-justify">
@@ -32,7 +32,7 @@ const SpecialProducts = () => {
             </button>
           </div>
           <div className="specialProductsRight">
-            <Image src={specialPicture} width={600} alt=""></Image>
+            <Image src={specialPicture} width={900} alt=""></Image>
           </div>
         </div>
       </div>

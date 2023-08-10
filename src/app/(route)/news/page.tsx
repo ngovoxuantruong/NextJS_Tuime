@@ -4,7 +4,7 @@ import News from '@/app/components/news/News';
 const page = () => {
   return (
     <div>
-      <Breadcrumb />
+      <Breadcrumb h2='Tin tức' label='TIN TỨC' />
       <div className="h-auto py-14">
         <News />
       </div>

@@ -4,7 +4,7 @@ import ServiceContent from '@/app/components/service/ServiceContent';
 const page = () => {
   return (
     <div>
-      <Breadcrumb />
+      <Breadcrumb label="DỊCH VỤ" h2="Dịch vụ" />
       <div className="h-auto py-14">
         <ServiceContent />
       </div>

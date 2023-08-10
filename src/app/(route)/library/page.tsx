@@ -3,7 +3,7 @@ import Breadcrumb from '@/app/components/UI/Breadcrumb';
 const page = () => {
   return (
     <div>
-      <Breadcrumb />
+      <Breadcrumb label='THƯ VIỆN' h2='Thư Viện'/>
     </div>
   );
 };

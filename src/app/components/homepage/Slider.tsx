@@ -7,7 +7,7 @@ import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import '../../styles/swiper.css';
-import { Button } from '@/app/components/UI/Button';
+import { Button } from '@/app/components/ui/Button';
 
 const Slider = () => {
   const sliders = [

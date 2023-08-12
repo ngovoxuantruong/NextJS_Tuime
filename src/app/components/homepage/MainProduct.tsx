@@ -1,10 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import Title from '../UI/Title';
+import Title from '../ui/Title';
 
 import ItemProduct from './ItemProduct';
 import { useState } from 'react';
+import clsx from 'clsx';
 
 export interface Products {
   id: number;
@@ -266,7 +267,20 @@ const MainProduct = () => {
           <ul className="menuMP flex justify-center">
             {allMenuMain.map((item) => (
               <li
-                className="mr-4 border-dashed border-2 border-transparent first:border-primary hover:border-primary box-border rounded-3xl"
+                className={clsx(
+                  'mr-4 border-dashed border-2 border-transparent hover:border-primary box-border rounded-3xl',
+                  activeTab === 1
+                    ? `[&:nth-child(1)]:border-primary`
+                    : activeTab === 2
+                    ? `[&:nth-child(2)]:border-primary`
+                    : activeTab === 3
+                    ? `[&:nth-child(3)]:border-primary`
+                    : activeTab === 4
+                    ? `[&:nth-child(4)]:border-primary`
+                    : activeTab === 5
+                    ? `[&:nth-child(5)]:border-primary`
+                    : '',
+                )}
                 key={item.id}
               >
                 {

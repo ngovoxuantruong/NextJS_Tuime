@@ -9,7 +9,6 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
       screens: {
         '2xl': '1400',
       },
@@ -30,8 +29,6 @@ module.exports = {
           'base-200': '#181818',
         },
       },
-      'cmyk',
-      'dark',
     ],
     styled: true,
   },

@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
-import Title from '@/app/components/Title';
-import Breadcrumb from '@/app/components/UI/Breadcrumb';
+import Title from '@/app/components/ui/Title';
+import Breadcrumb from '@/app/components/ui/Breadcrumb';
 import {
   TbMapPin,
   TbPhonePause,
@@ -9,15 +9,15 @@ import {
   TbRefresh,
 } from 'react-icons/tb';
 
-import { MapConponent } from '@/app/components/MapComponent/MapConponent';
-import FormContact from '@/app/components/FormContact/FormContact';
+import { MapConponent } from '@/app/components/map-component/MapConponent';
+import FormContact from '@/app/components/form-contact/FormContact';
 const page = () => {
   return (
     <section className="contact">
-      <Breadcrumb h2="Liên hệ" label="Liên hệ"></Breadcrumb>
+      <Breadcrumb breadcrumbTitle={[{ title: 'Liên hệ', src: '#!' }]} />
       <div className="selectContainer pt-[50px] pb-[50px]">
         <div className="container">
-          <Title h2="Thông tin liên hệ" text="SẢN PHẨM THÚ CƯNG"></Title>
+          <Title h2="Thông tin liên hệ" label="SẢN PHẨM THÚ CƯNG"></Title>
           <div className="form grid grid-cols-2 gap-4">
             <div className="formLeft ">
               <div className="formItem mb-5 m-5 flex justify-start items-center border-2 border-solid rounded-2xl p-5">

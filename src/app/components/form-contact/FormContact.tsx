@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Capcha from '@/app/components/Capcha/Capcha';
-import { Button } from '@/app/components/UI/Button';
+import Capcha from '@/app/components/capcha/Capcha';
+import { Button } from '@/app/components/ui/Button';
 import { BsSendFill } from 'react-icons/bs';
 import { TbRefresh } from 'react-icons/tb';
 interface FormData {

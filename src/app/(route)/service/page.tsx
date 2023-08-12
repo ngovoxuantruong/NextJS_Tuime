@@ -1,12 +1,18 @@
-import Breadcrumb from '@/app/components/UI/Breadcrumb';
-import ServiceContent from '@/app/components/service/ServiceContent';
+import Breadcrumb from '@/app/components/ui/Breadcrumb';
+import ServiceLeftContent from '@/app/(route)/service/ServiceContentLeft';
+import ServiceRightContent from '@/app/(route)/service/ServiceContentRight';
 
 const page = () => {
   return (
     <div>
-      <Breadcrumb label="DỊCH VỤ" h2="Dịch vụ" />
-      <div className="h-auto py-14">
-        <ServiceContent />
+      <Breadcrumb breadcrumbTitle={[{ title: 'Dịch vụ', src: '#!' }]} />
+      <div className="container max-w-[1200px] flex h-auto py-14">
+        <div className="container-group-left">
+          <ServiceLeftContent />
+        </div>
+        <div className="container-group-right">
+          <ServiceRightContent />
+        </div>
       </div>
     </div>
   );

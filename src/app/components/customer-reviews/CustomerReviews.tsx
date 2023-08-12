@@ -1,4 +1,4 @@
-import Title from '@/app/components/UI/Title';
+import Title from '@/app/components/ui/Title';
 
 import React from 'react';
 import Customer from './Customer';
@@ -41,11 +41,9 @@ const CustomerReviews = () => {
         <Title label="NHẬN XÉT" h2="Cảm nhận khách hàng"></Title>
         <div className="container">
           <div className="listReview grid grid-cols-3 gap-7 ml-32 mr-32">
-            {
-                customers.map((customer)=>(
-                    <Customer key={customer.id} customer={customer}></Customer>
-                ))
-            }
+            {customers.map((customer) => (
+              <Customer key={customer.id} customer={customer}></Customer>
+            ))}
           </div>
         </div>
       </div>

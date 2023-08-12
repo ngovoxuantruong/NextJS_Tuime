@@ -1,5 +1,5 @@
 import React from 'react';
-import Title from '../UI/Title';
+import Title from '../ui/Title';
 import Image from 'next/image';
 import picturePost from '../../../../public/tt7.jpeg';
 import Link from 'next/link';

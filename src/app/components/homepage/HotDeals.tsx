@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import Title from '@/app/components/UI/Title';
+import Title from '@/app/components/ui/Title';
 
 import {
   TbHeart,

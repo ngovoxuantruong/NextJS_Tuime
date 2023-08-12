@@ -4,7 +4,7 @@ import MainProduct from './components/homepage/MainProduct';
 import PetDiscount from './components/homepage/PetDiscount';
 import PetTypes from './components/homepage/PetTypes';
 import Slider from './components/homepage/Slider';
-import SpecialProducts from './components/UI/SpecialProducts';
+import SpecialProducts from './components/ui/SpecialProducts';
 import UpdatedPost from './components/homepage/UpdatedPost';
 import specialPicture from '../../public/get-image-v3.png';
 

@@ -1,7 +1,12 @@
-import Breadcrumb from '@/app/components/UI/Breadcrumb';
+import Breadcrumb from '@/app/components/ui/Breadcrumb';
 
 const page = () => {
-  return <div>{<Breadcrumb label='SẢN PHẨM' h2='Sản phẩm'/>}</div>;
+  return (
+    <div>
+      {<Breadcrumb breadcrumbTitle={[{ title: 'Sản phẩm', src: '#!' }]} />}
+      <div className="h-auto py-14"></div>
+    </div>
+  );
 };
 
 export default page;

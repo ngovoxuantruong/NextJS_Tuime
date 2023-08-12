@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import Title from '../UI/Title';
+import Title from '../ui/Title';
 import Link from 'next/link';
 
 const PetTypes = () => {

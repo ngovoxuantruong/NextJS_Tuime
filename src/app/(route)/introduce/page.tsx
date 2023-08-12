@@ -1,16 +1,16 @@
-import Breadcrumb from '@/app/components/UI/Breadcrumb';
-import SpecialProducts from '@/app/components/UI/SpecialProducts';
+import Breadcrumb from '@/app/components/ui/Breadcrumb';
+import SpecialProducts from '@/app/components/ui/SpecialProducts';
 import specialPicture from '../../../../public/get-image-v4.png';
 
-import CustomerReviews from '../../components/CustomerReviews/CustomerReviews';
-import { TeamWorks } from '@/app/components/TeamWork/TeamWorks';
+import CustomerReviews from '../../components/customer-reviews/CustomerReviews';
+import { TeamWorks } from '@/app/components/team-work/TeamWorks';
 import { TbHeadset, TbBox } from 'react-icons/tb';
 import { BiCreditCard } from 'react-icons/bi';
 import { BsTruck } from 'react-icons/bs';
 const page = () => {
   return (
     <section className="introduce">
-      <Breadcrumb h2="Giới thiệu" label="Giới thiệu"></Breadcrumb>
+      <Breadcrumb breadcrumbTitle={[{ title: 'Giới thiệu', src: '#!' }]} />
       <SpecialProducts
         orderLeft="order-2"
         orderRight="order-1"

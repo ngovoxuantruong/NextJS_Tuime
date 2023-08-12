@@ -1,5 +1,5 @@
-import CategoryModule from '../UI/CategoryModule';
-import FeaturedModule from '../UI/FeaturedModule';
+import CategoryModule from '../../components/ui/CategoryModule';
+import FeaturedModule from '../../components/ui/FeaturedModule';
 
 const ServiceContentLeft = () => {
   // Category menu

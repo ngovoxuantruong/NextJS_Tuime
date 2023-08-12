@@ -1,4 +1,4 @@
-import Title from '@/app/components/UI/Title';
+import Title from '@/app/components/ui/Title';
 import React, { FC } from 'react';
 import Image from 'next/image';
 import InforMember from './InforMember';

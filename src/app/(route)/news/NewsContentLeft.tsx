@@ -1,6 +1,6 @@
-import CategoryModule from '../UI/CategoryModule';
-import FeaturedModule from '../UI/FeaturedModule';
-import Search from '../UI/Search';
+import CategoryModule from '../../components/ui/CategoryModule';
+import FeaturedModule from '../../components/ui/FeaturedModule';
+import Search from '../../components/ui/Search';
 
 const NewsContentLeft = () => {
   // Category menu

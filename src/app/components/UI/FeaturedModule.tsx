@@ -35,7 +35,7 @@ const FeaturedModule: FC<FeaturedModuleProps> = ({
         {featuredContent.map(({ title, description, date, view }, index) => (
           <article
             key={index}
-            className="repeater-item border-dashed border-primary border-b-[1px]"
+            className="border-dashed border-primary border-b-[1px]"
           >
             <div className="w-full h-auto overflow-visible top-0 left-0 relative">
               <div className="flex justify-between items-start">

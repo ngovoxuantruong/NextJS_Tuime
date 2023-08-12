@@ -1,4 +1,4 @@
-import Blog from '../UI/Blog';
+import Blog from '../../components/ui/Blog';
 
 const NewsContentRight = () => {
   const post = [

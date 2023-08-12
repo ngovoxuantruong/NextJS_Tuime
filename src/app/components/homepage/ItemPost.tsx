@@ -4,7 +4,7 @@ import React, { FC } from 'react';
 import { TbCalendarCheck, TbUsersGroup } from 'react-icons/tb';
 import picturePost from '../../../../public/tt7.jpeg';
 import { Posts } from './UpdatedPost';
-import { Button } from '../UI/Button';
+import { Button } from '../ui/Button';
 
 interface PostProp {
   post: Posts;

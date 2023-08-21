@@ -1,5 +1,4 @@
 'use client';
-
 import {
   LuSearch,
   LuUser,
@@ -13,60 +12,22 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import { useQuery } from '@tanstack/react-query';
+import axios from 'axios';
 
 const Navbar = () => {
-  interface MenuItem {
-    label: string;
-    pathName?: string;
-    subMenu?: SubMenuItem[];
-  }
+  const { data: navbarData } = useQuery({
+    queryFn: async () => {
+      const { data }: any = await axios.get(
+        'https://petstore-api.code-hub.online/client/v1/navigation-menu',
+      );
 
-  interface SubMenuItem {
-    label: string;
-    pathName: string;
-  }
+      return data;
+    },
+    queryKey: ['navbar'],
+  });
 
-  // Main menu and subMenu
-  const menuTitle: MenuItem[] = [
-    { label: 'Trang chủ', pathName: '/' },
-    { label: 'Giới thiệu', pathName: '/introduce' },
-    {
-      label: 'Sản phẩm',
-      pathName: '/products',
-      subMenu: [
-        { label: 'Tất cả', pathName: '' },
-        { label: 'Đồ cho chó', pathName: '' },
-        { label: 'Đồ cho mèo', pathName: '' },
-        { label: 'Chim cảnh', pathName: '' },
-        { label: 'Cá cảnh', pathName: '' },
-      ],
-    },
-    {
-      label: 'Dịch vụ',
-      pathName: '/service',
-      subMenu: [
-        { label: 'Dịch vụ phối giống', pathName: '/service' },
-        { label: 'Dịch vụ khám sức khoẻ Pet', pathName: '/service' },
-        { label: 'Dịch vụ chăm sóc Pet', pathName: '/service' },
-      ],
-    },
-    {
-      label: 'Tin tức',
-      pathName: '/news',
-      subMenu: [{ label: 'Kiến thức', pathName: '/news' }],
-    },
-    {
-      label: 'Thư viện',
-      pathName: '/library',
-      subMenu: [
-        { label: 'Thư viện ảnh', pathName: '/library' },
-        { label: 'Thư viện video', pathName: '/library' },
-      ],
-    },
-    { label: 'Liên hệ', pathName: '/contact' },
-  ];
-
-  const pathname = usePathname();
+  const currentPathname = usePathname();
 
   return (
     <div className="bg-primary text-white py-2 w-full">
@@ -87,37 +48,44 @@ const Navbar = () => {
         {/* Navbar center */}
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 text-[15px] font-light uppercase">
-            {menuTitle.map(({ label, pathName, subMenu }, index) => (
-              <li
-                key={index}
-                className={clsx(
-                  'group relative py-1',
-                  pathname === pathName ? 'text-secondary' : '',
-                )}
-              >
-                <Link
-                  className="w-auto hover:text-secondary link:text-secondary focus:!text-secondary focus:!bg-primary font-normal pl-1"
-                  href={pathName ? pathName : '/'}
-                >
-                  {label}
-                  {subMenu && <BsChevronDown size="0.7rem" />}
-                </Link>
-                {subMenu && (
-                  <ul className="group-hover:block hidden w-fit p-2 bg-base-100 text-black rounded-none divide-y top-100% left-0 mt-10 absolute z-50">
-                    {subMenu.map(({ label, pathName }, subIndex) => (
-                      <li key={subIndex}>
-                        <Link
-                          className="group-hover:block hidden whitespace-nowrap normal-case rounded-none hover:!text-primary focus:!text-primary focus:!bg-gray-200 "
-                          href={pathName}
-                        >
-                          {label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-            ))}
+            {navbarData &&
+              navbarData.map(
+                ({ name, metadata, sub_categories }: any, index: any) => (
+                  <li
+                    key={index}
+                    className={clsx(
+                      'group relative py-1',
+                      currentPathname === metadata.slug ? 'text-secondary' : '',
+                    )}
+                  >
+                    <Link
+                      className="w-auto hover:text-secondary link:text-secondary focus:!text-secondary focus:!bg-primary font-normal pl-1"
+                      href={metadata.slug ? metadata.slug : '/'}
+                    >
+                      {name}
+                      {sub_categories.length > 1 && (
+                        <BsChevronDown size="0.7rem" />
+                      )}
+                    </Link>
+                    {sub_categories.length > 1 && (
+                      <ul className="group-hover:block hidden w-fit p-2 bg-base-100 text-black rounded-none divide-y top-100% left-0 mt-10 absolute z-50">
+                        {sub_categories.map(
+                          ({ name, metadata }: any, index: any) => (
+                            <li key={index}>
+                              <Link
+                                className="group-hover:block hidden whitespace-nowrap normal-case rounded-none hover:!text-primary focus:!text-primary focus:!bg-gray-200 "
+                                href={metadata.slug}
+                              >
+                                {name}
+                              </Link>
+                            </li>
+                          ),
+                        )}
+                      </ul>
+                    )}
+                  </li>
+                ),
+              )}
           </ul>
         </div>
 

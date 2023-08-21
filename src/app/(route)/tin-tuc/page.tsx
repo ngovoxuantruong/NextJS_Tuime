@@ -1,17 +1,17 @@
 import Breadcrumb from '@/app/components/ui/Breadcrumb';
-import ServiceLeftContent from '@/app/(route)/service/ServiceContentLeft';
-import ServiceRightContent from '@/app/(route)/service/ServiceContentRight';
+import NewsContentLeft from '@/app/(route)/tin-tuc/NewsContentLeft';
+import NewsContentRight from '@/app/(route)/tin-tuc/NewsContentRight';
 
 const page = () => {
   return (
     <div>
-      <Breadcrumb breadcrumbTitle={[{ title: 'Dịch vụ', src: '#!' }]} />
+      <Breadcrumb breadcrumbTitle={[{ title: 'Tin tức', src: '#!' }]} />
       <div className="container max-w-[1200px] flex h-auto py-14">
         <div className="container-group-left">
-          <ServiceLeftContent />
+          <NewsContentLeft />
         </div>
         <div className="container-group-right">
-          <ServiceRightContent />
+          <NewsContentRight />
         </div>
       </div>
     </div>

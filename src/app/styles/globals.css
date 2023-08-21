@@ -116,3 +116,18 @@
 .tag:hover::after {
   border-left-color: #721b65;
 }
+
+/* After checkbox */
+
+.aftercheckbox::after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 7px;
+  width: 5px;
+  height: 10px;
+  border-color: #721b65;
+  border-style: solid;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}

@@ -1,6 +1,6 @@
 import Breadcrumb from '@/app/components/ui/Breadcrumb';
 import SpecialProducts from '@/app/components/ui/SpecialProducts';
-import specialPicture from '../../../../public/get-image-v4.png';
+import specialPicture from '../../../../../public/get-image-v4.png';
 
 import CustomerReviews from '../../components/customer-reviews/CustomerReviews';
 import { TeamWorks } from '@/app/components/team-work/TeamWorks';

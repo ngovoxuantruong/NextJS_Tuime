@@ -22,7 +22,6 @@ const FilterBrand: FC<FilterBrandProps> = ({}) => {
 
     setCheckboxData(updatedCheckboxData);
   };
-  console.log(checkboxData);
 
   return (
     <div className="w-full h-auto top-0 left-0 bg-[#f4f4f4] rounded-[10px] pt-5 px-5 pb-8 mb-8 border-solid border-[#f4f4f4] border-2 relative">

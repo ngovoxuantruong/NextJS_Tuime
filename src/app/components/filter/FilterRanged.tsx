@@ -1,7 +1,7 @@
 'use client';
 import { FC } from 'react';
 import { FaRegDotCircle } from 'react-icons/fa';
-import MultiRangeSlider from '../multiRangeSlider/MultiRangeSlider';
+import MultiRangeSlider from '../multi-range-slider/MultiRangeSlider';
 
 interface FilterRangedProps {}
 

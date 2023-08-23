@@ -11,7 +11,7 @@ export interface Products {
   id: number;
   name: string;
   price: number;
-  cost: number;
+  cost?: number;
   picture: string;
   sale: number;
   status: boolean;
@@ -22,7 +22,7 @@ const allDataProducts: Products[] = [
     id: 1,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -32,7 +32,7 @@ const allDataProducts: Products[] = [
     id: 2,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -42,7 +42,7 @@ const allDataProducts: Products[] = [
     id: 3,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -52,7 +52,7 @@ const allDataProducts: Products[] = [
     id: 4,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -62,7 +62,7 @@ const allDataProducts: Products[] = [
     id: 5,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -72,7 +72,7 @@ const allDataProducts: Products[] = [
     id: 6,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -85,7 +85,7 @@ const dogDataProducts: Products[] = [
     id: 1,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -95,7 +95,7 @@ const dogDataProducts: Products[] = [
     id: 2,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -105,7 +105,7 @@ const dogDataProducts: Products[] = [
     id: 3,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -115,7 +115,7 @@ const dogDataProducts: Products[] = [
     id: 4,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -125,7 +125,7 @@ const dogDataProducts: Products[] = [
     id: 5,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -138,7 +138,7 @@ const catDataProducts: Products[] = [
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
 
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -149,7 +149,7 @@ const catDataProducts: Products[] = [
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
 
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -160,7 +160,7 @@ const catDataProducts: Products[] = [
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
 
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -171,7 +171,7 @@ const catDataProducts: Products[] = [
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
 
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -184,7 +184,7 @@ const birdDataProducts: Products[] = [
     id: 1,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -195,7 +195,7 @@ const birdDataProducts: Products[] = [
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
 
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -205,7 +205,7 @@ const birdDataProducts: Products[] = [
     id: 3,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -217,7 +217,7 @@ const fishDataProducts: Products[] = [
     id: 1,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,
@@ -227,7 +227,7 @@ const fishDataProducts: Products[] = [
     id: 2,
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
-    cost: 210.0,
+    cost: 210000,
     picture:
       'https://demo037127.web30s.vn/datafiles/34980/upload/images/san-pham/spnew4.jpg?t=1687163523',
     sale: 5,

@@ -60,7 +60,7 @@ const Navbar = () => {
                   >
                     <Link
                       className="w-auto hover:text-secondary link:text-secondary focus:!text-secondary focus:!bg-primary font-normal pl-1"
-                      href={metadata.slug ? metadata.slug : '/'}
+                      href={metadata.slug ? `/${metadata.slug}` : '/'}
                     >
                       {name}
                       {sub_categories.length > 1 && (

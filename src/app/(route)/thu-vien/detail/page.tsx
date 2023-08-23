@@ -13,8 +13,8 @@ import Title from '@/app/components/ui/Title';
 import Link from 'next/link';
 import { FaRegImages } from 'react-icons/fa';
 import FacebookComment from '@/app/components/ui/FacebookComment';
-import { FacebookShareButton, TwitterShareButton } from 'react-share';
-import { FacebookIcon, TwitterIcon } from 'react-share';
+import Tags from '@/app/components/ui/Tags';
+import Shares from '@/app/components/ui/Shares';
 
 type imageLibrary = {
   image: string;
@@ -46,6 +46,8 @@ const Page = () => {
       src: '',
     },
   ];
+
+  const tagsInfo = [{ label: 'Mèo', slug: '#!' }];
 
   const postUrl = 'https://localhost:3001';
 
@@ -89,28 +91,11 @@ const Page = () => {
           <div className="flex items-center justify-between">
             {/* Tags */}
             <div className="w-1/2 h-auto flex justify-start">
-              <div className="w-fit h-auto mr-4 font-medium">Tags:</div>
-              <div className="bg-base-100">
-                <Link href={'#!'} className="tag">
-                  Mèo
-                </Link>
-              </div>
+              <Tags tags={tagsInfo} />
             </div>
             {/* Share */}
             <div className="w-1/2 h-auto flex items-center justify-end">
-              <div className="w-fit h-auto mr-4 font-medium">Share:</div>
-              <ul className="flex items-center">
-                <li>
-                  <FacebookShareButton url={'url'} className="mr-2">
-                    <FacebookIcon size={32} round={true} />
-                  </FacebookShareButton>
-                </li>
-                <li>
-                  <TwitterShareButton url={'url'} title={'title'}>
-                    <TwitterIcon size={32} round={true} />
-                  </TwitterShareButton>
-                </li>
-              </ul>
+              <Shares />
             </div>
           </div>
         </div>

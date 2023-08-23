@@ -53,3 +53,11 @@
   font-size: 20px;
   font-weight: bold;
 }
+
+.swiper-slide-thumb-active {
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--c-1684829417589, #721b65);
+  margin-right: 10px;
+  overflow: hidden;
+}

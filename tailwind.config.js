@@ -13,6 +13,14 @@ module.exports = {
         '2xl': '1400',
       },
     },
+    extend: {
+      screens: {
+        large: { max: '1199px' },
+        // => @media (max-width: 1199px) { ... }
+        desktop: '1200px',
+        // => @media (min-width: 1200px) { ... }
+      },
+    },
   },
 
   plugins: [require('@tailwindcss/typography'), require('daisyui')],

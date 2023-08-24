@@ -14,6 +14,10 @@ import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
+import { formattingPrice } from '../helpers/formattingPrice';
+import { FiTrash } from 'react-icons/fi';
+import { Button } from './ui/Button';
+import { useState } from 'react';
 
 const Navbar = () => {
   const { data: navbarData } = useQuery({
@@ -26,6 +30,16 @@ const Navbar = () => {
     },
     queryKey: ['navbar'],
   });
+
+  const [isCartHovered, setIsCartHovered] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsCartHovered(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsCartHovered(false);
+  };
 
   const currentPathname = usePathname();
 
@@ -54,7 +68,7 @@ const Navbar = () => {
                   <li
                     key={index}
                     className={clsx(
-                      'group relative py-1',
+                      'group/nav relative py-1',
                       currentPathname === metadata.slug ? 'text-secondary' : '',
                     )}
                   >
@@ -68,12 +82,12 @@ const Navbar = () => {
                       )}
                     </Link>
                     {sub_categories.length > 1 && (
-                      <ul className="group-hover:block hidden w-fit p-2 bg-base-100 text-black rounded-none divide-y top-100% left-0 mt-10 absolute z-50">
+                      <ul className="group-hover/nav:block hidden w-fit p-2 bg-base-100 text-black rounded-none divide-y top-100% -left-1/4 mt-10 absolute z-50">
                         {sub_categories.map(
                           ({ name, metadata }: any, index: any) => (
                             <li key={index}>
                               <Link
-                                className="group-hover:block hidden whitespace-nowrap normal-case rounded-none hover:!text-primary focus:!text-primary focus:!bg-gray-200 "
+                                className="group-hover/nav:block hidden whitespace-nowrap normal-case rounded-none hover:!text-primary focus:!text-primary focus:!bg-gray-200 "
                                 href={metadata.slug}
                               >
                                 {name}
@@ -91,15 +105,15 @@ const Navbar = () => {
 
         {/* Navbar end */}
         <div className="navbar-end">
-          <button className="btn btn-ghost btn-circle">
+          <button className="btn btn-ghost hover:text-secondary duration-300 btn-circle">
             <LuSearch size={'1.2rem'} />
           </button>
 
-          <button className="btn btn-ghost btn-circle">
+          <button className="btn btn-ghost hover:text-secondary duration-300 btn-circle">
             <LuUser size={'1.2rem'} />
           </button>
 
-          <button className="btn btn-ghost btn-circle">
+          <button className="btn btn-ghost hover:text-secondary duration-300 btn-circle">
             <LuFileText size={'1.2rem'} />
           </button>
 
@@ -107,12 +121,82 @@ const Navbar = () => {
             <span className="indicator-item top-3 right-3 badge badge-secondary">
               9
             </span>
-            <button className="btn btn-ghost btn-circle">
+            <button
+              className="btn btn-ghost  hover:text-secondary duration-300 btn-circle"
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+            >
               <LuShoppingCart size={'1.2rem'} />
             </button>
+            <div
+              onMouseOver={handleMouseOver}
+              onMouseOut={handleMouseOut}
+              className="w-[350px]  bg-base-100 py-2 px-5 top-full left-0 -translate-x-1/2 shadow-md absolute z-50 duration-300 overflow-hidden"
+              style={{ display: isCartHovered ? 'block' : 'none' }}
+            >
+              <div className="w-full max-h-[320px] !h-auto p-2 overflow-auto relative scrollbar scrollbar-thumbs scrollbar-track ">
+                <div className="grid w-full !h-auto grid-cols-1 auto-rows-[120px] gap-1">
+                  {/* Product & price & amount */}
+                  <article className="py-4 border-b border-solid border-[#e5e5e5]">
+                    <div className="w-full h-full relative">
+                      <Link
+                        href={'#!'}
+                        className="w-24 h-24 top-1/2  left-0 bg-no-repeat bg-contain -translate-y-1/2 border border-solid border-[#ededed] hover:border-green-300 duration-100 absolute block"
+                        style={{
+                          backgroundImage: "url('/product/spnew4.jpg')",
+                        }}
+                      />
+                      <div className="flex flex-col gap-0.5 w-[calc(100%-130px)] h-full top-1/2 left-[110px] -translate-y-1/2 absolute overflow-hidden text-base-200">
+                        <Link
+                          href={'#!'}
+                          className="w-full h-auto text-base line-clamp-1 font-medium"
+                        >
+                          Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm
+                        </Link>
+                        <p className="text-sm">270ml</p>
+                        <div className="flex items-start justify-between">
+                          <p className="text-sm text-primary">
+                            {formattingPrice(199500)}đ
+                          </p>
+                          <p className="text-sm text-gray-400 line-through">
+                            {formattingPrice(210000)}đ
+                          </p>
+                        </div>
+                        <p className="text-sm">x1</p>
+                      </div>
+                      <div className="w-4 h-4 top-1 left-[100%] -translate-x-full inline-flex absolute text-base-200">
+                        <FiTrash />
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              {/* Total amount */}
+              <div className="w-full h-fit py-5 top-0 left-0  text-base-200 border-b border-solid border-[#e5e5e5] relative">
+                <div className="w-full h-full flex items-center justify-between relative">
+                  <p className="font-medium">Tổng tiền:</p>
+                  <p className="font-semibold text-primary">
+                    {formattingPrice(199500)}đ
+                  </p>
+                </div>
+              </div>
+              {/* Cart & Pay */}
+              <div className="w-full h-auto py-5 top-0 left-0  text-base-200 relative">
+                <div className="w-full h-full flex items-center justify-between relative">
+                  <Button
+                    size={'sm'}
+                    variant={'primary'}
+                    className="hover:bg-secondary hover:text-base-200 border-none"
+                  >
+                    Giỏ hàng
+                  </Button>
+                  <Button size={'sm'}>Thanh toán</Button>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <button className="btn btn-ghost btn-circle">
+          <button className="btn btn-ghost hover:text-secondary duration-300 btn-circle">
             <LuLanguages size={'1.2rem'} />
           </button>
         </div>

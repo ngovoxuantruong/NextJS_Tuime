@@ -41,13 +41,13 @@
 
 .container-group-left {
   order: 1;
-  width: 30%;
+  width: 25%;
   padding: 0px 15px 0px 0px;
   display: block;
 }
 
 .container-group-right {
-  width: 70%;
+  width: 75%;
   order: 2;
   padding: 0px 0px 0px 15px;
   display: block;
@@ -130,4 +130,19 @@
   border-style: solid;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
+}
+
+/* Scroll bar */
+
+.scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollbar-thumbs::-webkit-scrollbar-thumb {
+  background: #7f7f7f;
+}
+
+.scrollbar-track::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }

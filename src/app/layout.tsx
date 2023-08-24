@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Providers from './components/Provider';
+import clsx from 'clsx';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,12 +21,22 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="myTheme">
       <link rel="icon" href="/favicon.png" sizes="any" />
-      <body className={inter.className}>
-        <Providers>
-          <Navbar />
-          {children}
-          <Footer />
-        </Providers>
+      <body
+        className={clsx(
+          inter.className,
+          'scrollbar scrollbar-thumbs scrollbar-track',
+        )}
+      >
+        <div className="large:bg-base-200 large:w-full large:h-[100vh] large:flex large:justify-center large:items-center large:text-2xl large:text-base-100 desktop:hidden">
+          Responsive in progress...
+        </div>
+        <div className="large:hidden desktop:block desktop:overflow-hidden ">
+          <Providers>
+            <Navbar />
+            {children}
+            <Footer />
+          </Providers>
+        </div>
       </body>
     </html>
   );

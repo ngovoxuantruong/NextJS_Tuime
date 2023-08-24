@@ -6,20 +6,11 @@ import Title from '../ui/Title';
 import ItemProduct from './ItemProduct';
 import { useState } from 'react';
 import clsx from 'clsx';
+import { ProductType } from '@/app/lib/validators/products';
 
-export interface Products {
-  id: number;
-  name: string;
-  price: number;
-  cost?: number;
-  picture: string;
-  sale: number;
-  status: boolean;
-}
-
-const allDataProducts: Products[] = [
+const allDataProducts: ProductType[] = [
   {
-    id: 1,
+    id: '1',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -29,7 +20,7 @@ const allDataProducts: Products[] = [
     status: true,
   },
   {
-    id: 2,
+    id: '2',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -39,7 +30,7 @@ const allDataProducts: Products[] = [
     status: false,
   },
   {
-    id: 3,
+    id: '3',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -49,7 +40,7 @@ const allDataProducts: Products[] = [
     status: true,
   },
   {
-    id: 4,
+    id: '4',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -59,7 +50,7 @@ const allDataProducts: Products[] = [
     status: true,
   },
   {
-    id: 5,
+    id: '5',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -69,7 +60,7 @@ const allDataProducts: Products[] = [
     status: true,
   },
   {
-    id: 6,
+    id: '6',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -80,9 +71,9 @@ const allDataProducts: Products[] = [
   },
 ];
 
-const dogDataProducts: Products[] = [
+const dogDataProducts: ProductType[] = [
   {
-    id: 1,
+    id: '1',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -92,7 +83,7 @@ const dogDataProducts: Products[] = [
     status: true,
   },
   {
-    id: 2,
+    id: '2',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -102,7 +93,7 @@ const dogDataProducts: Products[] = [
     status: false,
   },
   {
-    id: 3,
+    id: '3',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -112,7 +103,7 @@ const dogDataProducts: Products[] = [
     status: true,
   },
   {
-    id: 4,
+    id: '4',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -122,7 +113,7 @@ const dogDataProducts: Products[] = [
     status: true,
   },
   {
-    id: 5,
+    id: '5',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -132,9 +123,9 @@ const dogDataProducts: Products[] = [
     status: true,
   },
 ];
-const catDataProducts: Products[] = [
+const catDataProducts: ProductType[] = [
   {
-    id: 1,
+    id: '1',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
 
@@ -145,7 +136,7 @@ const catDataProducts: Products[] = [
     status: true,
   },
   {
-    id: 2,
+    id: '2',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
 
@@ -156,7 +147,7 @@ const catDataProducts: Products[] = [
     status: false,
   },
   {
-    id: 3,
+    id: '3',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
 
@@ -167,7 +158,7 @@ const catDataProducts: Products[] = [
     status: true,
   },
   {
-    id: 4,
+    id: '4',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
 
@@ -179,9 +170,9 @@ const catDataProducts: Products[] = [
   },
 ];
 
-const birdDataProducts: Products[] = [
+const birdDataProducts: ProductType[] = [
   {
-    id: 1,
+    id: '1',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -191,7 +182,7 @@ const birdDataProducts: Products[] = [
     status: true,
   },
   {
-    id: 2,
+    id: '2',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
 
@@ -202,7 +193,7 @@ const birdDataProducts: Products[] = [
     status: false,
   },
   {
-    id: 3,
+    id: '3',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -212,9 +203,9 @@ const birdDataProducts: Products[] = [
     status: true,
   },
 ];
-const fishDataProducts: Products[] = [
+const fishDataProducts: ProductType[] = [
   {
-    id: 1,
+    id: '1',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -224,7 +215,7 @@ const fishDataProducts: Products[] = [
     status: true,
   },
   {
-    id: 2,
+    id: '2',
     name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
     price: 195000,
     cost: 210000,
@@ -236,22 +227,22 @@ const fishDataProducts: Products[] = [
 ];
 
 interface menuMainProduct {
-  id: number;
+  id: string;
   name: string;
 }
 
 const allMenuMain: menuMainProduct[] = [
-  { id: 1, name: 'Tất cả' },
-  { id: 2, name: 'Đồ ăn cho chó' },
-  { id: 3, name: 'Đồ ăn cho mèo' },
-  { id: 4, name: 'Chim cảnh' },
-  { id: 5, name: 'Cá cảnh' },
+  { id: '1', name: 'Tất cả' },
+  { id: '2', name: 'Đồ ăn cho chó' },
+  { id: '3', name: 'Đồ ăn cho mèo' },
+  { id: '4', name: 'Chim cảnh' },
+  { id: '5', name: 'Cá cảnh' },
 ];
 
 const MainProduct = () => {
-  const [activeTab, setActiveTab] = useState(1);
+  const [activeTab, setActiveTab] = useState('1');
 
-  const handleClickActiveTab = (tabNumber: number) => {
+  const handleClickActiveTab = (tabNumber: string) => {
     setActiveTab(tabNumber);
   };
 
@@ -269,15 +260,15 @@ const MainProduct = () => {
               <li
                 className={clsx(
                   'mr-4 border-dashed border-2 border-transparent hover:border-primary box-border rounded-3xl',
-                  activeTab === 1
+                  activeTab === '1'
                     ? `[&:nth-child(1)]:border-primary`
-                    : activeTab === 2
+                    : activeTab === '2'
                     ? `[&:nth-child(2)]:border-primary`
-                    : activeTab === 3
+                    : activeTab === '3'
                     ? `[&:nth-child(3)]:border-primary`
-                    : activeTab === 4
+                    : activeTab === '4'
                     ? `[&:nth-child(4)]:border-primary`
-                    : activeTab === 5
+                    : activeTab === '5'
                     ? `[&:nth-child(5)]:border-primary`
                     : '',
                 )}
@@ -299,23 +290,23 @@ const MainProduct = () => {
             <div className="selectListProduct">
               <div className="products grid grid-cols-4 grid-flow-row gap-4 ">
                 {/* Product */}
-                {activeTab === 1
-                  ? allDataProducts.map((product: Products) => (
+                {activeTab === '1'
+                  ? allDataProducts.map((product: ProductType) => (
                       <ItemProduct key={product.id} product={product} />
                     ))
-                  : activeTab === 2
-                  ? dogDataProducts.map((product: Products) => (
+                  : activeTab === '2'
+                  ? dogDataProducts.map((product: ProductType) => (
                       <ItemProduct key={product.id} product={product} />
                     ))
-                  : activeTab === 3
-                  ? catDataProducts.map((product: Products) => (
+                  : activeTab === '3'
+                  ? catDataProducts.map((product: ProductType) => (
                       <ItemProduct key={product.id} product={product} />
                     ))
-                  : activeTab == 4
-                  ? birdDataProducts.map((product: Products) => (
+                  : activeTab == '4'
+                  ? birdDataProducts.map((product: ProductType) => (
                       <ItemProduct key={product.id} product={product} />
                     ))
-                  : fishDataProducts.map((product: Products) => (
+                  : fishDataProducts.map((product: ProductType) => (
                       <ItemProduct key={product.id} product={product} />
                     ))}
               </div>

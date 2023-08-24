@@ -6,12 +6,12 @@ import {
   TbSearch,
   TbArrowsExchange2,
 } from 'react-icons/tb/';
-import { Products } from './MainProduct';
 import { formattingPrice } from '@/app/helpers/formattingPrice';
 import clsx from 'clsx';
+import { ProductType } from '@/app/lib/validators/products';
 
 interface ProductItemProps {
-  product: Products;
+  product: ProductType;
 }
 
 const ItemProduct: FC<ProductItemProps> = ({ product }) => {
@@ -22,9 +22,9 @@ const ItemProduct: FC<ProductItemProps> = ({ product }) => {
         <div className="topProduct relative">
           <div className="linkProduct relative">
             <Link
-              className="background-widget"
-              style={{ backgroundImage: 'url("/product/spnew4.jpg")' }}
-              href=""
+              className="background-widget !pb-[100%] hover:scale-110 duration-300"
+              style={{ backgroundImage: 'url("/product/thuc-an-ca.jpg")' }}
+              href="#!"
             />
             <Link className="icon absolute top-0 right-0" href="">
               <TbHeart className="text-4xl p-2 bg-gray-100 rounded-3xl hover:bg-primary hover:text-white"></TbHeart>

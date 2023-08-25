@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import { TbMapPin, TbPhonePause, TbMailOpened } from 'react-icons/tb';
 import { MapConponent } from '@/app/components/map-component/MapConponent';

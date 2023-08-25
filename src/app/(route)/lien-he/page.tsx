@@ -2,12 +2,7 @@
 import React from 'react';
 import Title from '@/app/components/ui/Title';
 import Breadcrumb from '@/app/components/ui/Breadcrumb';
-import {
-  TbMapPin,
-  TbPhonePause,
-  TbMailOpened,
-  TbRefresh,
-} from 'react-icons/tb';
+import { TbMapPin, TbPhonePause, TbMailOpened } from 'react-icons/tb';
 
 import { MapConponent } from '@/app/components/map-component/MapConponent';
 import FormContact from '@/app/components/form-contact/FormContact';

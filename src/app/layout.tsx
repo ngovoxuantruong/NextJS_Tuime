@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Providers from './components/Provider';
 import clsx from 'clsx';
+import StyledComponentsRegistry from './lib/AntdRegistry';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -31,11 +32,13 @@ export default function RootLayout({
           Responsive in progress...
         </div>
         <div className="large:hidden desktop:block desktop:overflow-hidden ">
-          <Providers>
-            <Navbar />
-            {children}
-            <Footer />
-          </Providers>
+          <StyledComponentsRegistry>
+            <Providers>
+              <Navbar />
+              {children}
+              <Footer />
+            </Providers>
+          </StyledComponentsRegistry>
         </div>
       </body>
     </html>

@@ -4,9 +4,9 @@ export const ProductValidator = z.object({
   id: z.string(),
   name: z.string(),
   price: z.number(),
-  cost: z.number(),
+  cost: z.number().optional(),
   picture: z.string(),
-  sale: z.number(),
+  sale: z.number().optional(),
   status: z.boolean(),
 });
 

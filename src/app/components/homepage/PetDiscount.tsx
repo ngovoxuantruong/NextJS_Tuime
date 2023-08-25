@@ -9,7 +9,7 @@ const PetDiscount = () => {
   ];
 
   return (
-    <section className="container max-w-[1200px] my-12 p-8">
+    <section className="container max-w-[1200px] my-12">
       <div className="repeater-box grid-cols-2 auto-rows-auto gap-5">
         {petDiscountImage.map(({ src, h3 }, index) => (
           <article
@@ -18,7 +18,7 @@ const PetDiscount = () => {
           >
             <Link href="#!">
               <Image
-                className="hover:scale-110 duration-300"
+                className="hover:scale-110 duration-500"
                 alt="cat"
                 src={src}
                 width={560}

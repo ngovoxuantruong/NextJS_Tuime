@@ -146,3 +146,24 @@
 .scrollbar-track::-webkit-scrollbar-track {
   background: #f1f1f1;
 }
+
+/* Antd pagination */
+li.ant-pagination-item.ant-pagination-item-1.ant-pagination-item-active {
+  font-weight: 600;
+  background-color: #721b65;
+  border-color: #721b65;
+}
+
+li.ant-pagination-item {
+  border: 1px solid #721b65 !important;
+}
+
+li.ant-pagination-prev.ant-pagination-disabled,
+li.ant-pagination-next {
+  border: 1px solid #721b65 !important;
+  line-height: 0 !important;
+}
+
+.ant-pagination .ant-pagination-item-active a {
+  color: white !important;
+}

@@ -1,5 +1,6 @@
 import ItemProduct from '@/app/components/homepage/ItemProduct';
 import { ProductType } from '@/app/lib/validators/products';
+import { Pagination } from 'antd';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -9,7 +10,6 @@ const ProductRightContent = () => {
       id: '1',
       name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
       price: 195000,
-      cost: 210000,
       picture:
         'https://demo03@7127.web30s.vn/datafiles/34980/upload/images/product/thuc-an-jbl-novo-tab-thuc-an-ca-canh-1.jpg?t=1687253366',
       sale: 5,
@@ -131,6 +131,7 @@ const ProductRightContent = () => {
             <ItemProduct product={product} />
           </div>
         ))}
+        <Pagination defaultCurrent={1} total={50} />
       </div>
     </div>
   );

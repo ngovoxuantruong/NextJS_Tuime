@@ -25,7 +25,7 @@ import FacebookComment from '@/app/components/ui/FacebookComment';
 import clsx from 'clsx';
 import Title from '@/app/components/ui/Title';
 import ItemProduct from '@/app/components/homepage/ItemProduct';
-import { Products } from '@/app/components/homepage/MainProduct';
+import { ProductType } from '@/app/lib/validators/products';
 
 interface pageProps {}
 
@@ -39,9 +39,9 @@ const Page: FC<pageProps> = ({}) => {
     { label: 'Lên màu đẹp', slug: '#!' },
   ];
 
-  const allDataProducts: Products[] = [
+  const allDataProducts: ProductType[] = [
     {
-      id: 1,
+      id: '1',
       name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
       price: 195000,
 
@@ -51,7 +51,7 @@ const Page: FC<pageProps> = ({}) => {
       status: true,
     },
     {
-      id: 2,
+      id: '2',
       name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
       price: 195000,
       cost: 210000,
@@ -61,7 +61,7 @@ const Page: FC<pageProps> = ({}) => {
       status: false,
     },
     {
-      id: 3,
+      id: '3',
       name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
       price: 195000,
       cost: 210000,
@@ -71,7 +71,7 @@ const Page: FC<pageProps> = ({}) => {
       status: true,
     },
     {
-      id: 4,
+      id: '4',
       name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
       price: 195000,
       cost: 210000,
@@ -81,7 +81,7 @@ const Page: FC<pageProps> = ({}) => {
       status: true,
     },
     {
-      id: 5,
+      id: '5',
       name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
       price: 195000,
       cost: 210000,
@@ -91,7 +91,7 @@ const Page: FC<pageProps> = ({}) => {
       status: true,
     },
     {
-      id: 6,
+      id: '6',
       name: 'Bình xịt Tropiclean trị ve bọ chét trên chó và ổ nằm',
       price: 195000,
       cost: 210000,
@@ -105,8 +105,8 @@ const Page: FC<pageProps> = ({}) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   const navTabs = [
-    { tabName: 'Mô tả sản phẩm', id: 1 },
-    { tabName: 'Bình luận', id: 2 },
+    { tabName: 'Mô tả sản phẩm', id: '1' },
+    { tabName: 'Bình luận', id: '2' },
   ];
 
   const [currentTab, setCurrentTab] = useState(1);
@@ -249,13 +249,13 @@ const Page: FC<pageProps> = ({}) => {
             {/* Product description */}
             <div className="flex flex-col w-full h-auto top-0 left-0 mb-12 relative">
               <nav className="nav">
-                {navTabs.map(({ tabName, id }) => (
+                {navTabs.map(({ tabName, id }, index) => (
                   <Fragment key={id}>
                     <a
-                      onClick={() => setCurrentTab(id)}
+                      onClick={() => setCurrentTab(index)}
                       className={clsx(
                         'nav-link',
-                        currentTab === id ? 'nav-link-active' : '',
+                        currentTab === index ? 'nav-link-active' : '',
                       )}
                     >
                       {tabName}
@@ -309,7 +309,7 @@ const Page: FC<pageProps> = ({}) => {
               modules={[Navigation, Autoplay]}
               className="mySwiper sub-slider"
             >
-              {allDataProducts.map((product: Products, index) => (
+              {allDataProducts.map((product: ProductType, index) => (
                 <SwiperSlide key={index}>
                   <ItemProduct key={product.id} product={product} />
                 </SwiperSlide>

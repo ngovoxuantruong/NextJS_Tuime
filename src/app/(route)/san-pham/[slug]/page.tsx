@@ -6,11 +6,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/free-mode';
 import 'swiper/css/thumbs';
-import '@/app/styles/swiper-image-button.css';
+import '@/app/styles/swiperImageButton.css';
 // import required modules
 import { Navigation, Thumbs, FreeMode, Autoplay } from 'swiper/modules';
 
-import '@/app/styles/nav-tabs.css';
+import '@/app/styles/navTabs.css';
 
 import Breadcrumb from '@/app/components/ui/Breadcrumb';
 import { Button } from '@/app/components/ui/Button';

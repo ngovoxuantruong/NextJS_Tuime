@@ -1,7 +1,5 @@
 import Breadcrumb from '@/app/components/ui/Breadcrumb';
 import SpecialProducts from '@/app/components/ui/SpecialProducts';
-import specialPicture from '../../../../../public/get-image-v4.png';
-
 import CustomerReviews from '../../components/customer-reviews/CustomerReviews';
 import { TeamWorks } from '@/app/components/team-work/TeamWorks';
 import { TbHeadset, TbBox } from 'react-icons/tb';
@@ -17,7 +15,7 @@ const page = () => {
         isButton={false}
         label="GIỚI THIỆU"
         h2="GIỚI THIỆU TUMIE - Hệ thống siêu thị thú cưng"
-        picture={specialPicture}
+        picture={'/get-image-v4.png'}
         specialDes="<p> Với kinh nghiệm hơn 5 năm hoạt động trong thị trường 
         thú cưng, ARALE PETSHOP chuyên cung cấp tất cả các đồ dùng, thức ăn, phụ kiện cho chó, mèo.</>
         <p> Luôn cung cấp hàng hóa chất lượng, với giá cạnh tranh nhất thị trường. Luôn lắng nghe khách 

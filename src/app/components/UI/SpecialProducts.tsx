@@ -2,7 +2,6 @@ import React, { FC } from 'react';
 import Title from './Title';
 import Image from 'next/image';
 import { Button } from './Button';
-import { specialDesProp } from '@/app/page';
 
 interface SpecialProductProp {
   orderLeft: string;

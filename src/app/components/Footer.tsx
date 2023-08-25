@@ -10,6 +10,7 @@ import {
 } from 'react-icons/tfi';
 import { SlPhone } from 'react-icons/sl';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -127,33 +128,41 @@ export default function Footer() {
           </div>
           <div className="footerBottomRight flex justify-between ">
             <Link href="">
-              <img
-                className="w-16 p-2"
-                src="https://demo037127.web30s.vn/datafiles/34980/upload/images/banner/payment_4%20%281%29.jpg"
-                alt=""
+              <Image
+                src="/payment/payment1.jpg"
+                alt="pay1"
+                width={60}
+                height={60}
+                className="ml-3"
               />
             </Link>
             <Link href="">
-              <img
-                className="w-16 p-2"
-                src="https://demo037127.web30s.vn/datafiles/34980/upload/images/banner/paymnet2.png?t=1684722123"
-                alt=""
-              />
-            </Link>
-
-            <Link href="">
-              <img
-                className="w-16 p-2"
-                src="https://demo037127.web30s.vn/datafiles/34980/upload/images/banner/payment3.png?t=1684722123"
-                alt=""
+              <Image
+                src="/payment/payment2.png"
+                alt="pay2"
+                width={60}
+                height={60}
+                className="ml-3"
               />
             </Link>
 
             <Link href="">
-              <img
-                className="w-16 p-2"
-                src="https://demo037127.web30s.vn/datafiles/34980/upload/images/banner/payment1.png?t=1684722123"
-                alt=""
+              <Image
+                src="/payment/payment3.png"
+                alt="pay3"
+                width={60}
+                height={60}
+                className="ml-3"
+              />
+            </Link>
+
+            <Link href="">
+              <Image
+                src="/payment/payment4.png"
+                alt="pay4"
+                width={60}
+                height={60}
+                className="ml-3"
               />
             </Link>
           </div>

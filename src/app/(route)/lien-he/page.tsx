@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import Title from '@/app/components/ui/Title';
-import Breadcrumb from '@/app/components/ui/Breadcrumb';
 import { TbMapPin, TbPhonePause, TbMailOpened } from 'react-icons/tb';
-
 import { MapConponent } from '@/app/components/map-component/MapConponent';
 import FormContact from '@/app/components/form-contact/FormContact';
+import Breadcrumb from '@/app/components/ui/Breadcrumb';
+import Title from '@/app/components/ui/Title';
+
 const page = () => {
   return (
     <section className="contact">

@@ -148,7 +148,7 @@
 }
 
 /* Antd pagination */
-li.ant-pagination-item.ant-pagination-item-1.ant-pagination-item-active {
+li.ant-pagination-item.ant-pagination-item-active {
   font-weight: 600;
   background-color: #721b65;
   border-color: #721b65;
@@ -159,6 +159,8 @@ li.ant-pagination-item {
 }
 
 li.ant-pagination-prev.ant-pagination-disabled,
+li.ant-pagination-next.ant-pagination-disabled,
+li.ant-pagination-prev,
 li.ant-pagination-next {
   border: 1px solid #721b65 !important;
   line-height: 0 !important;
